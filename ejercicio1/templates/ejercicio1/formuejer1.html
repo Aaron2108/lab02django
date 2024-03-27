@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <h2>{{ titulo }}</h2>
+<form action="{% url 'ejercicio1:formuejer1' %}" method="post">
+    {% csrf_token %}
+    Ingresa el primer numero:<input type="number" name="number1"><br>
+    Ingresa el segundo numero:<input type="number" name="number2"><br>
+    Operacion:<select name="operacion">
+                <option value="+">+</option>
+                <option value="-" selected="selected">-</option>
+                <option value="x">✖</option>
+                </select> <br>
+    // Botón de enviar<input type="submit" name="submit" value="Enviar">
+</form>
+</body>
+</html>
